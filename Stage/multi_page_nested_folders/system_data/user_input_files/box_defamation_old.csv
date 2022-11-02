@@ -1,0 +1,18 @@
+﻿key, x, y, z, w
+boxA,3,3,3,3
+boxB,4,4,4,4
+boxC,4,4,4,4
+key,amount,priority
+boxA,10,1
+boxB,12,5
+boxC,15,3
+boxA,13,3
+boxD,12,5
+boxE,15,3
+boxF,13,3
+boxB,12,4
+boxC,15,4
+boxA,13,4
+boxD,12,4
+boxE,15,4
+boxF,13,4
