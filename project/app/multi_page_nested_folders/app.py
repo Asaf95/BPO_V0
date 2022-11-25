@@ -7,8 +7,8 @@ import dash_mantine_components as dmc
 from dash import Dash, dcc, html
 from dash_iconify import DashIconify
 
-from Stage.multi_page_nested_folders import constants_bpo
-from Stage.multi_page_nested_folders.system_data import app_data_handler
+from project.app.multi_page_nested_folders import constants_bpo
+from project.app.multi_page_nested_folders.system_data import app_data_handler
 
 "----------------------------------------------------  Application  ---------------------------------------------------"
 
@@ -163,7 +163,6 @@ def start_app():
     this function run the app
     """
     try:
-        app.run_server(debug=True)
-        # app.run_server(debug=False, port=8888) to run on production
+        app.run_server(host="0.0.0.0", port=8050, debug=False)        # app.run_server(debug=False, port=8888) to run on production
     except Exception as Error:
         raise f"Main App Startup didn't worked!! Check the following Error: \n {Error}"

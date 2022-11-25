@@ -17,8 +17,8 @@ import pandas as pd
 from dash import html, dcc, Input, Output, dash_table, callback, register_page
 from dash.dependencies import State
 
-from Stage.multi_page_nested_folders import constants_bpo
-from Stage.multi_page_nested_folders.system_data import app_data_handler, const_system_data
+from project.app.multi_page_nested_folders import constants_bpo
+from project.app.multi_page_nested_folders.system_data import const_system_data, app_data_handler
 
 log.basicConfig(
     level=log.INFO,

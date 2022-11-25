@@ -15,7 +15,10 @@ This is a demo of a multipage app with nested folders in the `pages` folder.
 
 This module creates the application framework.
 It contains all containers for each component in the app and the style configuration for it
-
+```
+sudo docker build -t docker-dash project/.
+sudo docker run -p 8050:8050 docker-dash
+```
 
 ### Helpfully links and referents
 icon's   

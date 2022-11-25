@@ -4,7 +4,7 @@
 # import pandas as pd
 # from dash import callback, register_page, dcc, html, dash_table
 # from dash.dependencies import Input, Output, State
-# from Stage.multi_page_nested_folders.system_data import app_data_handler
+# from app.multi_page_nested_folders.system_data import app_data_handler
 # from dash import Dash, dcc, html
 # from dash.exceptions import PreventUpdate
 # from dash import Dash, html, dcc, Input, Output, dash_table

@@ -2,8 +2,8 @@ import dash_mantine_components as dmc
 from dash import dcc, html
 from dash import register_page
 
-from Stage.multi_page_nested_folders import constants_bpo
-from Stage.multi_page_nested_folders.system_data import app_data_handler
+from project.app.multi_page_nested_folders import constants_bpo
+from project.app.multi_page_nested_folders.system_data import app_data_handler
 
 register_page(__name__, path="/", icon="ant-design:home-filled")
 

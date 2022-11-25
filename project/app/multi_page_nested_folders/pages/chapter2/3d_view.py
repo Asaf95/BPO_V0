@@ -7,9 +7,10 @@ from dash import dcc
 from dash import html, callback, register_page
 from dash.dependencies import Input, Output
 
-from Stage.multi_page_nested_folders import constants_bpo
-from Stage.multi_page_nested_folders.bin_packing_solver import solver
-from Stage.multi_page_nested_folders.system_data import app_data_handler
+from project.app.multi_page_nested_folders import constants_bpo
+from project.app.multi_page_nested_folders.bin_packing_solver import solver
+from project.app.multi_page_nested_folders.system_data import app_data_handler
+
 
 # start here :)
 
