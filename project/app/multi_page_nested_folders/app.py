@@ -7,8 +7,8 @@ import dash_mantine_components as dmc
 from dash import Dash, dcc, html
 from dash_iconify import DashIconify
 
-from project.app.multi_page_nested_folders import constants_bpo
-from project.app.multi_page_nested_folders.system_data import app_data_handler
+from .app.multi_page_nested_folders import constants_bpo
+from system_data import app_data_handler
 
 "----------------------------------------------------  Application  ---------------------------------------------------"
 
