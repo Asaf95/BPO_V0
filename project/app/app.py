@@ -1,3 +1,3 @@
-import project.app.multi_page_nested_folders as app
+import multi_page_nested_folders.app as aa
 if __name__ == "__main__":
-    app.start_app()
+    aa.start_app()
