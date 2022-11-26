@@ -7,15 +7,15 @@ import dash_mantine_components as dmc
 from dash import Dash, dcc, html
 from dash_iconify import DashIconify
 
-from Stage.multi_page_nested_folders import constants_bpo
-from Stage.multi_page_nested_folders.system_data import app_data_handler
+import constants_bpo
+from system_data import app_data_handler
 
 "----------------------------------------------------  Application  ---------------------------------------------------"
 
 # If you want to use a  theme, refactor the assets dir to assets, the dbc.themes.LUX is located there by default
 # And don't forget to import dash_bootstrap_components as dbc first
 app = Dash(__name__, use_pages=True)
-
+server = app.server
 "------------------------------------------------  Application Sidebar  -----------------------------------------------"
 
 
@@ -158,12 +158,13 @@ app.layout = html.Div(style=constants_bpo.MAIN_APP_STYLE,
                       )
 
 
-def start_app():
-    """
-    this function run the app
-    """
-    try:
-        app.run_server(debug=True)
-        # app.run_server(debug=False, port=8888) to run on production
-    except Exception as Error:
-        raise f"Main App Startup didn't worked!! Check the following Error: \n {Error}"
+# def start_app():
+#     """
+#     this function run the app There is nothing like app.run_server to run the app.py file like you would do locally
+#     during development (see code block below). This piece of code is excluded because we will run the app with a
+#     command from the Dockerfile to run it using a Gunicorn WGSI Server.
+#     """
+#     try:
+#         app.run_server(host="0.0.0.0", port=8050, debug=False)        # app.run_server(debug=False, port=8888) to run on production
+#     except Exception as Error:
+#         raise f"Main App Startup didn't worked!! Check the following Error: \n {Error}"

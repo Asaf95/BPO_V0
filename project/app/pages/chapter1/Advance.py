@@ -6,7 +6,7 @@ import pandas as pd
 from dash import callback, register_page, dcc, html, dash_table
 from dash.dependencies import Input, Output, State
 
-from Stage.multi_page_nested_folders.system_data import app_data_handler
+from system_data import app_data_handler
 
 "---------------------------------- Hard codded configuration for some of the Styles ----------------------------------"
 

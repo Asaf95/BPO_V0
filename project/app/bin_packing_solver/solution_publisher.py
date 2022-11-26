@@ -6,7 +6,7 @@ The User will be able to download the file.
 """
 import pandas as pd
 
-from Stage.multi_page_nested_folders.bin_packing_solver import connection_bp_to_db
+from bin_packing_solver import connection_bp_to_db
 
 
 def get_general_result_report(packer):

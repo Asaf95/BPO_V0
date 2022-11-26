@@ -7,27 +7,15 @@ And the other is for other is for amount of bins, boxes of the current problem.
 This way we will have 4 dcc store for each user dataframe.
 Might use definition
 """
-# TODO: WATCH THIS!!
-# https://www.youtube.com/watch?v=v969_M6cWk0&ab_channel=Fireship
-
-import logging as log
 
 import dash_mantine_components as dmc
 import pandas as pd
 from dash import html, dcc, Input, Output, dash_table, callback, register_page
 from dash.dependencies import State
 
-from Stage.multi_page_nested_folders import constants_bpo
-from Stage.multi_page_nested_folders.system_data import app_data_handler, const_system_data
+import constants_bpo
+from system_data import const_system_data, app_data_handler
 
-log.basicConfig(
-    level=log.INFO,
-    filename=app_data_handler.get_logs_path(
-        __name__.replace(
-            '.',
-            '_')),
-    filemode="a",
-    format="%(asctime)s - line: %(lineno)d - module: %(name)s - %(message)s")
 
 list_of_last_clicks_numbers_amount = []
 list_of_last_clicks_numbers_define = []
@@ -37,7 +25,6 @@ list_of_last_clicks_numbers_define = []
 register_page(__name__, icon="bi:box",
               suppress_callback_exceptions=True)
 
-log.info(f"register_page {__name__}")
 
 
 def update_datatables_and_internal_app_data(
@@ -61,15 +48,10 @@ def update_datatables_and_internal_app_data(
         list_of_last_clicks.append(n_clicks)
         current_boxes_def_df.append({c['id']: '' for c in columns})
 
-    log.info(
-        f"used update_store_data_of_boxes_amount_data\n current_boxes_def_df is {current_boxes_def_df} ")
     if current_boxes_def_df is None or len(current_boxes_def_df) == 0:
-        log.info(
-            f"current_boxes_def_df was none, getting the default dataframe for boxes")
         updated_dict = app_data_handler.get_csv_without_index(
             const_system_data.USER_INPUT_FILES_LOC.get(table_name)).to_dict('records')
     else:
-        log.info(f"current_boxes_def_df len is was updated")
         updated_dict = pd.DataFrame(current_boxes_def_df).to_dict('records')
         app_data_handler.input_files_input(const_system_data.USER_INPUT_FILES_LOC.get(
             table_name), pd.DataFrame(current_boxes_def_df))  # Updating the local data
