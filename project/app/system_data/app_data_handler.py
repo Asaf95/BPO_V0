@@ -1,5 +1,4 @@
 import base64
-import logging as log
 import os
 import pickle
 
@@ -9,17 +8,8 @@ abs_path = os.path.dirname(__file__)
 
 
 def get_logs_path(file_name):
-    return abs_path + "/app_logs/" + file_name + ".log"
+    return abs_path + "/app_logs/" + file_name + ".txt"
 
-
-log.basicConfig(
-    level=log.INFO,
-    filename=get_logs_path(
-        __name__.replace(
-            '.',
-            '_')),
-    filemode="a",
-    format="%(asctime)s - line: %(lineno)d - module: %(name)s - %(message)s")
 
 
 def get_local_file(file_name):
@@ -42,22 +32,16 @@ def get_csv_without_index(file_name):
 
 
 def user_input_csv(file_name, csv_file):
-    log.info(
-        f'function user_input_csv was used with {file_name} as the file name')
     csv_file.to_csv(f'{abs_path}/user_input_files/{file_name}',
                     index=False, header=True, encoding='utf-8-sig')
 
 
 def input_files_input(file_name, csv_file):
-    log.info(
-        f'function input_files_input was used with {file_name} as the file name')
     csv_file.to_csv(f'{abs_path}/{file_name}', index=False,
                     header=True, encoding='utf-8-sig')
 
 
 def packing_results(file_name, df: pd.DataFrame):
-    log.info(
-        f'function user_input_csv was used with {file_name} as the file name')
     df.to_csv(f"{abs_path}/packing_results/{file_name}",
               index=False, header=True, encoding='utf-8-sig')
 
@@ -83,7 +67,7 @@ def get_pickle_file(file_name):
 
 
 def get_logs_path(file_name):
-    return abs_path + "/app_logs/" + file_name + ".log"
+    return abs_path + "/app_logs/" + file_name + ".txt"
 
 
 def get_picture_path(name):

@@ -7,7 +7,7 @@ bin_packing_solver to the system data will be using this module.
 """
 import pandas as pd
 
-from project.app.multi_page_nested_folders.system_data import const_system_data, app_data_handler
+from system_data import const_system_data, app_data_handler
 
 
 def get_containers_bp_format() -> pd.DataFrame:

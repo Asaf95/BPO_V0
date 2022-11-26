@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from py3dbp import Packer, Bin, Item
 
-from project.app.multi_page_nested_folders.bin_packing_solver import connection_bp_to_db, solution_publisher
+from bin_packing_solver import connection_bp_to_db, solution_publisher
 
 
 def add_item_to_packing(item):

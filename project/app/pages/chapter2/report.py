@@ -1,6 +1,6 @@
 from dash import dcc, html, Input, Output, callback, register_page, dash_table
 
-from project.app.multi_page_nested_folders.system_data import app_data_handler
+from system_data import app_data_handler
 
 register_page(__name__, icon="iconoir:stats-report")
 

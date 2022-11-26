@@ -2,7 +2,7 @@
 # from dash.exceptions import PreventUpdate
 # from dash import Dash, html, dcc, Output, Input, callback, dash_table, register_page
 # import plotly.express as px
-# from app.multi_page_nested_folders.system_data import app_data_handler
+# from appmulti_page_nested_folders.system_data import app_data_handler
 #
 # register_page(__name__, icon="iconoir:stats-report", suppress_callback_exceptions=True)
 #
