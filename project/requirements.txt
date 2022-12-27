@@ -1,7 +1,7 @@
 dash==2.6.0
 plotly==5.9.0
 py3dbp==1.1.2
-setuptools==63.2.0
+setuptools==65.5.1
 pandas==1.4.3
 dash-bootstrap-components==1.2.1
 dash-mantine-components==0.10.2
